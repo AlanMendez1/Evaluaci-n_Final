@@ -1,5 +1,9 @@
+from functions import character_byte
+from functions import word_byte
+from functions import byte_ascii
+
 def menu():
-    option = int(input("\n 1. Byte to character \n 2. Word to byte \n 3. Byte to ASCII \n Select a number: "))
+    option = int(input("Select a number: \n 1. Byte to character \n 2. Word to byte \n 3. Byte to ASCII \n"))
     if option == 1:
         char = input("Enter a character to convert to byte: ")
         result = character_byte(char)
@@ -14,25 +18,5 @@ def menu():
         print(f"The binary '{byte}' in ASCII representation is: {result}")
     else:
         print("Invalid option selected.")
-
-def character_byte(character):
-    number = ord(character)
-    binary_str = bin(number)[2:]
-    return binary_str
-
-def word_byte(text):
-    binary_str = ''
-    for char in text:
-        number = ord(char)
-        binary_char = bin(number)[2:]
-        binary_char = binary_char.zfill(8)
-        binary_str += binary_char
-    return binary_str
-
-def byte_ascii(byte):
-    num = int(byte, 2)
-    ascii_char = chr(num)
-    result = f"{ascii_char}-{num}"
-    return result
 
 menu()
