@@ -19,14 +19,18 @@
 - cd
 - ls
 - mkdir
+- git branch
+- git checkout
+- git push origin
 
 #### Ramas Creadas
  - Main
  - Master
- - Rama-Isabella
+ - Rama-Isabella (archivos: funciones.py, .gitignore, README)
  - alan_dev
 
 #### Opciones del Proyecto
+- Menu de opciones
 - Cambiar de caracteres a binarios
 - Cambiar de cadena de caracteres a binario
 - Cambiar de binario a ASCII
